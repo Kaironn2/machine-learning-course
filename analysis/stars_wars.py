@@ -34,7 +34,7 @@ features = [
 ]
 target = ['status']
 
-x = df[features]
+X = df[features]
 y = df[target]
 
 general_replaces = {
@@ -46,16 +46,16 @@ general_replaces = {
 }
 type_replaces = {'tipo_1': 1, 'tipo_2': 2, 'tipo_3': 3, 'tipo_4': 4, 'tipo_5': 5}
 replaces = general_replaces | type_replaces
-x = x.replace(replaces)
+X = X.replace(replaces)
 
-x
+X
 
 # %%
 
 from sklearn import tree
 
 model = tree.DecisionTreeClassifier()
-model.fit(x, y)
+model.fit(X, y)
 
 # %%
 

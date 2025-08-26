@@ -14,18 +14,18 @@ df
 features = ['temperatura', 'copo', 'espuma', 'cor']
 target = ['classe']
 
-x = df[features]
+X = df[features]
 y = df[target]
 
-x = x.replace({'mud': 1, 'pint': 2, 'sim': 1, 'não': 0, 'clara': 0, 'escura': 1})
+X = X.replace({'mud': 1, 'pint': 2, 'sim': 1, 'não': 0, 'clara': 0, 'escura': 1})
 
-x
+X
 # %%
 
 from sklearn import tree
 
 model = tree.DecisionTreeClassifier()
-model.fit(x, y)
+model.fit(X, y)
 
 # %%
 

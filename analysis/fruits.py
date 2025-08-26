@@ -20,11 +20,11 @@ model = tree.DecisionTreeClassifier(random_state=42)
 y = df['Fruta']
 
 features = ['Arredondada', 'Suculenta', 'Vermelha', 'Doce']
-x = df[features]
+X = df[features]
 
 # %%
 
-model.fit(x, y)
+model.fit(X, y)
 
 # %%
 model.predict([[0, 0, 0, 0]])
